@@ -116,6 +116,7 @@
     main {
       overflow-y: auto;
       background-color: #DFE0E2;
+      padding-bottom: env(safe-area-inset-bottom);
     }
     .card {
       width: 100%;
