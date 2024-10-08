@@ -119,7 +119,7 @@
     }
     .card {
       width: 100%;
-      height: 100%;
+      height: max-content;
       flex-direction: column;
       padding: 0;
       border-radius: 0;
