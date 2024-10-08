@@ -116,6 +116,7 @@
     main {
       overflow-y: auto;
       background-color: #DFE0E2;
+      min-height: 100vh;
     }
     .card {
       width: 100%;
