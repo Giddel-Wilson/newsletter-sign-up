@@ -120,7 +120,7 @@
     }
     .card {
       width: 100%;
-      height: max-content;
+      height: 100%;
       flex-direction: column;
       padding: 0;
       border-radius: 0;
@@ -128,7 +128,7 @@
     }
     .card-content {
       width: 100%;
-      height: max-content;
+      height: 100%;
       /* background-color: red; */
       padding: 2rem 1rem 1.5rem 1rem;
       display: flex;
@@ -147,6 +147,13 @@
       border-bottom-right-radius: 1rem;
     }
   }
+
+  @media only screen and (max-width: 330px) {
+    .card-content {
+      height: 120vh;
+    }
+  }
+
   @media only screen and (930px >= width >= 768px) {
     .card-content {
       height: 100%;
