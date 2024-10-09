@@ -1,4 +1,6 @@
 <script>
+  import { goto } from '$app/navigation';
+
   let email = "";
   let emailError = false;
   let showError = false;
@@ -8,12 +10,17 @@
     { msg: "Measuring to ensure updates are a success" },
     { msg: "And much more!" },
   ];
-  
+
   // Email validation regex
   function validateEmail() {
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     emailError = !emailPattern.test(email);
     showError = emailError; // Show error only if email is invalid
+    
+    if (!emailError) {
+      // Pass the email as a query parameter
+      goto(`/success?email=${encodeURIComponent(email)}`);
+    }
   }
 
   // Clear error when user starts typing
@@ -25,18 +32,15 @@
   }
 </script>
 
-  <main class="w-screen h-screen flex items-center justify-center text-[#222640] overflow-hidden">
-  
-  <div
-    class="card p-4 variant-filled w-max h-[80vh] flex justify-between items-center"
-  >
-  <div class="card-image mb-img hidden w-full h-[40vh] border-none rounded-xl">
-    <enhanced:img
-      src="../lib/assets/illustration-sign-up-mobile.svg"
-      alt=""
-      class="img w-full h-full object-cover"
-    />
-  </div>
+<main class="w-screen h-screen flex items-center justify-center text-[#222640] overflow-hidden">
+  <div class="card p-4 variant-filled w-max h-[80vh] flex justify-between items-center">
+    <div class="card-image mb-img hidden w-full h-[40vh] border-none rounded-xl">
+      <enhanced:img
+        src="../lib/assets/illustration-sign-up-mobile.svg"
+        alt=""
+        class="img w-full h-full object-cover"
+      />
+    </div>
 
     <div class="card-content w-2/4 py-16 px-7">
       <!-- Sign-up form start -->
@@ -61,8 +65,7 @@
                   alt=""
                   class="w-5 h-5"
                 />
-              </span
-              >
+              </span>
               <span class="flex-auto">{listItem.msg}</span>
             </a>
           </li>
@@ -95,10 +98,6 @@
           Subscribe to monthly newsletter
         </button>
       </form>
-      
-      
-
-      <!-- Sign-up form end -->
     </div>
     <div class="card-image dt-img w-2/4 h-full border rounded-xl border-none">
       <enhanced:img
@@ -106,7 +105,6 @@
         alt=""
         class="w-full h-full object-cover rounded-lg"
       />
-    
     </div>
   </div>
 </main>
@@ -150,7 +148,7 @@
 
   @media only screen and (max-width: 330px) {
     .card-content {
-      height: 120vh;
+      height: 130vh;
     }
   }
 
