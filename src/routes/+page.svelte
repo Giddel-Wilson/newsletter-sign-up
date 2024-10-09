@@ -127,7 +127,6 @@
     .card-content {
       width: 100%;
       height: 100%;
-      /* background-color: red; */
       padding: 2rem 1rem 1.5rem 1rem;
       display: flex;
       flex-direction: column;
@@ -147,8 +146,9 @@
   }
 
   @media only screen and (max-width: 330px) {
-    main {
-      height: 140vh;
+    .card-content {
+      height: 130vh;
+      padding-bottom: env(safe-area-inset-bottom);
     }
   }
 
