@@ -148,7 +148,7 @@
 
   @media only screen and (max-width: 330px) {
     .card-content {
-      height: 130vh;
+      height: 120vh;
     }
   }
 
