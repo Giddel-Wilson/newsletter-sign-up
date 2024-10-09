@@ -116,7 +116,6 @@
       background-color: #DFE0E2;
       padding-bottom: env(safe-area-inset-bottom);
       width: 100vw;
-      min-height: calc(100vh - (env(safe-area-inset-bottom) + env(safe-area-inset-top)));
     }
     .card {
       width: 100%;
@@ -125,6 +124,7 @@
       padding: 0;
       border-radius: 0;
       justify-content: flex-start;
+      min-height: calc(100vh - (env(safe-area-inset-bottom) + env(safe-area-inset-top)));
     }
     .card-content {
       width: 100%;
