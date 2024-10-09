@@ -136,7 +136,7 @@
     .card-content {
       width: 100%;
       height: 100%;
-      min-height: calc(100vh - env(safe-area-inset-bottom) - env(safe-area-inset-top));
+      min-height: calc(max-content - env(safe-area-inset-bottom) - env(safe-area-inset-top));
       padding: env(safe-area-inset-top) 1rem env(safe-area-inset-bottom) 1rem;
       display: flex;
       flex-direction: column;
