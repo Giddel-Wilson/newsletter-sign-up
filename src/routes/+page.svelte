@@ -1,5 +1,5 @@
 <script>
-  import { goto } from '$app/navigation';
+  import { goto } from "$app/navigation";
 
   let email = "";
   let emailError = false;
@@ -16,7 +16,7 @@
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     emailError = !emailPattern.test(email);
     showError = emailError; // Show error only if email is invalid
-    
+
     if (!emailError) {
       // Pass the email as a query parameter
       goto(`/success?email=${encodeURIComponent(email)}`);
@@ -32,9 +32,15 @@
   }
 </script>
 
-<main class="w-screen h-screen flex items-center justify-center text-[#222640] overflow-hidden">
-  <div class="card p-4 variant-filled w-max h-[80vh] flex justify-between items-center">
-    <div class="card-image mb-img hidden w-full h-[40vh] border-none rounded-xl">
+<main
+  class="w-screen h-screen flex items-center justify-center text-[#222640] overflow-hidden"
+>
+  <div
+    class="card p-4 variant-filled w-max h-[80vh] flex justify-between items-center"
+  >
+    <div
+      class="card-image mb-img hidden w-full h-[40vh] border-none rounded-xl"
+    >
       <enhanced:img
         src="../lib/assets/illustration-sign-up-mobile.svg"
         alt=""
@@ -46,7 +52,7 @@
       <!-- Sign-up form start -->
       <div>
         <h1 class="xl:text-5xl text-4xl font-bold">Stay updated!</h1>
-  
+
         <p class="xl:my-7 my-5 font-medium xl:text-sm text-xs">
           Join 60,000+ product managers receiving monthly updates on:
         </p>
@@ -82,7 +88,9 @@
             id="Email"
             bind:value={email}
             class="input variant-filled border-surface-200 rounded-md w-full xl:p-4 p-3
-              {emailError ? 'border-red-600 bg-red-100 placeholder-red-400' : 'border-gray-300 bg-white placeholder-gray-400'}"
+              {emailError
+              ? 'border-red-600 bg-red-100 placeholder-red-400'
+              : 'border-gray-300 bg-white placeholder-gray-400'}"
             placeholder="email@company.com"
             on:input={handleInput}
           />
@@ -90,7 +98,7 @@
             <p class="text-red-600 text-xs mt-1">Valid email required</p>
           {/if}
         </div>
-      
+
         <button
           type="submit"
           class="btn variant-filled-surface rounded-md w-full xl:mt-7 mt-5 xl:p-4 p-3"
@@ -113,7 +121,7 @@
   @media only screen and (max-width: 930px) {
     main {
       overflow-y: auto;
-      background-color: #DFE0E2;
+      background-color: #dfe0e2;
       padding-bottom: env(safe-area-inset-bottom);
       width: 100vw;
     }
@@ -128,14 +136,18 @@
     .card-content {
       width: 100%;
       height: 100%;
-      /* background-color: red; */
-      padding: 2rem 1rem 1.5rem 1rem;
+      min-height: calc(100vh - env(safe-area-inset-bottom) - env(safe-area-inset-top));
+      padding: env(safe-area-inset-top) 1rem env(safe-area-inset-bottom) 1rem;
       display: flex;
       flex-direction: column;
       justify-content: center;
       gap: 1rem;
-      min-height: calc(100vh - env(safe-area-inset-bottom));
+      background-color: red;
     }
+    .card-content > *:first-child {
+      margin-top: 0;
+    }
+
     .dt-img {
       display: none;
     }
@@ -162,7 +174,8 @@
     h1 {
       font-size: 3.5rem;
     }
-    p, span {
+    p,
+    span {
       font-size: 1.4rem;
     }
     .card-content {
@@ -181,7 +194,9 @@
     label {
       font-size: 1.3rem;
     }
-    input, button, ::placeholder {
+    input,
+    button,
+    ::placeholder {
       padding: 1.4rem;
       font-size: larger;
     }
