@@ -116,6 +116,7 @@
       background-color: #DFE0E2;
       padding-bottom: env(safe-area-inset-bottom);
       width: 100vw;
+      min-height: calc(100vh - (env(safe-area-inset-bottom) + env(safe-area-inset-top)));
     }
     .card {
       width: 100%;
@@ -134,7 +135,6 @@
       flex-direction: column;
       justify-content: center;
       gap: 1rem;
-      min-height: calc(100vh - (env(safe-area-inset-bottom) + env(safe-area-inset-top)));
     }
     .dt-img {
       display: none;
