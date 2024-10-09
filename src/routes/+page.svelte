@@ -124,7 +124,6 @@
       padding: 0;
       border-radius: 0;
       justify-content: flex-start;
-      min-height: calc(100vh - (env(safe-area-inset-bottom) + env(safe-area-inset-top)));
     }
     .card-content {
       width: 100%;
@@ -135,6 +134,7 @@
       flex-direction: column;
       justify-content: center;
       gap: 1rem;
+      min-height: calc(max-content - (env(safe-area-inset-bottom) + env(safe-area-inset-top)));
     }
     .dt-img {
       display: none;
