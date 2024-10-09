@@ -146,8 +146,12 @@
   }
 
   @media only screen and (max-width: 330px) {
+    .card {
+      height: max-content;
+    }
+
     .card-content {
-      height: 130vh;
+      height: 150vh !important;
       padding-bottom: env(safe-area-inset-bottom);
     }
   }
