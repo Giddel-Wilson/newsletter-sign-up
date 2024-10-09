@@ -48,7 +48,7 @@
     .card {
       width: 100%;
       height: calc(100vh - env(safe-area-inset-bottom));
-      padding: 20vh 30px 30px 30px;
+      padding: 15vh 30px 30px 30px;
       border-radius: 0;
       justify-content: space-evenly;
       align-items: center;
