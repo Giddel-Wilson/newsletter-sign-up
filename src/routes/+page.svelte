@@ -157,7 +157,7 @@
     }
   }
 
-  @media only screen and (max-width: 380px) {
+  @media only screen and (max-width: 370px) {
     .card {
       height: calc(100vh - env(safe-area-inset-bottom));
     }
