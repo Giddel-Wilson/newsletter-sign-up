@@ -134,7 +134,7 @@
       flex-direction: column;
       justify-content: center;
       gap: 1rem;
-      min-height: calc(max-content - (env(safe-area-inset-bottom) + env(safe-area-inset-top)));
+      min-height: calc(100vh - env(safe-area-inset-bottom));
     }
     .dt-img {
       display: none;
