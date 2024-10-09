@@ -50,7 +50,7 @@
       height: calc(100vh - env(safe-area-inset-bottom));
       padding: 20vh 30px 30px 30px;
       border-radius: 0;
-      justify-content: space-between;
+      justify-content: space-evenly;
       align-items: center;
     }
     .card div h1 {
