@@ -161,7 +161,7 @@
     .card-content {
       height: 120vh;
       min-height: calc(100vh - (env(safe-area-inset-bottom) + env(safe-area-inset-top)));
-      padding: env(safe-area-inset-top) 1rem (env(safe-area-inset-bottom) + 3rem) 1rem;
+      padding: env(safe-area-inset-top) 1rem 4rem 1rem;
     }
   }
 
