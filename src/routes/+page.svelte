@@ -159,7 +159,7 @@
 
   @media only screen and (max-width: 330px) {
     .card-content {
-      height: max-content;
+      height: max-content + env(safe-area-inset-bottom);
       min-height: calc(100vh - (env(safe-area-inset-bottom) + env(safe-area-inset-top)));
       padding: env(safe-area-inset-top) 1rem env(safe-area-inset-bottom) 1rem;
     }
