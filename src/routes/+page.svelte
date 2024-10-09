@@ -157,11 +157,14 @@
     }
   }
 
-  @media only screen and (max-width: 330px) {
+  @media only screen and (max-width: 380px) {
+    .card {
+      height: calc(100vh - env(safe-area-inset-bottom));
+    }
     .card-content {
-      height: 130vh !important;
+      height: 100vh !important;
       min-height: calc(100vh - env(safe-area-inset-bottom) - env(safe-area-inset-top));
-      padding: env(safe-area-inset-top) 1rem calc(env(safe-area-inset-bottom) + 7rem) 1rem;
+      padding: env(safe-area-inset-top) 1rem calc(env(safe-area-inset-bottom)) 1rem;
     }
   }
 
