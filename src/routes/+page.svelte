@@ -56,7 +56,7 @@
         {#each list as listItem, i}
           <li>
             <a
-              href="/elements/lists"
+              href="/"
               class="flex items-center font-medium xl:text-sm text-xs"
             >
               <span class="badge">
@@ -115,10 +115,11 @@
       overflow-y: auto;
       background-color: #DFE0E2;
       padding-bottom: env(safe-area-inset-bottom);
+      min-height: 100vh; /* Ensure full height on mobile */
     }
     .card {
       width: 100%;
-      height: 100%;
+      height: auto; /* Remove fixed height */
       flex-direction: column;
       padding: 0;
       border-radius: 0;
@@ -126,12 +127,12 @@
     }
     .card-content {
       width: 100%;
-      height: 100%;
-      padding: 2rem 1rem 1.5rem 1rem;
+      padding: 2rem 1rem 2rem 1rem;
       display: flex;
       flex-direction: column;
       justify-content: center;
       gap: 1rem;
+      flex-grow: 1; /* Allow to expand */
     }
     .dt-img {
       display: none;
@@ -146,46 +147,9 @@
   }
 
   @media only screen and (max-width: 330px) {
-    .card {
-      height: max-content;
-    }
-
     .card-content {
-      height: 150vh !important;
+      height: auto; /* Allow height to adjust based on content */
       padding-bottom: env(safe-area-inset-bottom);
-    }
-  }
-
-  @media only screen and (930px >= width >= 768px) {
-    .card-content {
-      height: 100%;
-      gap: 2rem;
-    }
-    h1 {
-      font-size: 3.5rem;
-    }
-    p, span {
-      font-size: 1.4rem;
-    }
-    .card-content {
-      padding: 2rem 2rem 1.5rem 2rem;
-    }
-    .card-content div {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-    ul {
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
-    label {
-      font-size: 1.3rem;
-    }
-    input, button, ::placeholder {
-      padding: 1.4rem;
-      font-size: larger;
     }
   }
 </style>
