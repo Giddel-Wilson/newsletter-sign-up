@@ -165,6 +165,7 @@
       height: 100vh !important;
       min-height: calc(100vh - env(safe-area-inset-bottom) - env(safe-area-inset-top));
       padding: env(safe-area-inset-top) 1rem calc(env(safe-area-inset-bottom)) 1rem;
+      margin-top: -1rem;
     }
   }
 
